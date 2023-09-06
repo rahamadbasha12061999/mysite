@@ -1,0 +1,10 @@
+<h1>{{ question.question_text }}</h1>
+
+{% if choices %}
+    {% for choice in choices %}
+        <li>{{ choice.choice_text }}, votes: {{ choice.votes }}</li>
+    {% endfor %}
+{% else %}
+    <p> Choices not there </p>
+{% endif %}
+<a href="{% url 'polls:create-choice' question.pk %}">Create Choice</a>

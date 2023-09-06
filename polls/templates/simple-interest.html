@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+{% load my_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Interest Calculation</title>
+</head>
+<body>
+<!--{
+        "principle": principle,
+        "months": months,
+        "rate_of_interest": rate_of_interest,
+        "total": total
+    }-->
+    <h1>{{ name|to_title }}</h1>
+    <h6>Aadhaar: {{ aadhaar|mask}}</h6>
+    <h5>Principle Amount: {{ principle|to_number }}</h5>
+    <h5>Monthts: {{ months }}</h5>
+    <h5>Rate of Interest: {{ rate_of_interest }} % per 100 Rs</h5>
+    <h5>Total amout need to Pay: {{ total|to_number }}</h5>
+</body>
+</html>
